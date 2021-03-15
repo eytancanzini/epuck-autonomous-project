@@ -16,10 +16,16 @@
 #include "chprintf.h"
 #include "usbcfg.h"
 #include "sensors/VL53L0X/VL53L0X.h"
+#include "sensors/proximity.h"
+
+messagebus_t bus;
+MUTEX_DECL(bus_lock);
+CONDVAR_DECL(bus_condvar);
 
 
 int main(void)
 {
+	messagebus_init(&bus, &bus_lock, &bus_condvar);
 
     halInit();
     chSysInit();
@@ -32,6 +38,8 @@ int main(void)
     right_motor_set_speed(0);
     usb_start();
     VL53L0X_start();
+    proximity_start();
+    calibrate_ir();
 
 
     uint16_t val;
@@ -45,6 +53,14 @@ int main(void)
     		chprintf((BaseSequentialStream*)&SDU1, "%4d,\n", val);
     	}
         chThdSleepMilliseconds(1000);
+    	if (SDU1.config->usbp->state == USB_ACTIVE) {
+    		chprintf((BaseSequentialStream*)&SDU1, "-----------\n");
+    		chprintf((BaseSequentialStream*)&SDU1, "%4d\n", get_prox(0));
+    		chprintf((BaseSequentialStream*)&SDU1, "%4d\n", get_prox(1));
+    		chprintf((BaseSequentialStream*)&SDU1, "%4d\n", get_prox(2));
+    		chprintf((BaseSequentialStream*)&SDU1, "%4d\n", get_prox(3));
+    		chprintf((BaseSequentialStream*)&SDU1, "-----------\n");
+    	}
         set_led(LED1, 0);
         chThdSleepMilliseconds(1000);
     }

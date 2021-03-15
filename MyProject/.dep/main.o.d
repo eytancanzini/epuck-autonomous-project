@@ -153,7 +153,8 @@ build/obj/main.o: main.c \
  ../e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/../../platform/inc/vl53l0x_platform.h \
  ../e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/../../platform/inc/../../core/inc/vl53l0x_def.h \
  ../e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/../../platform/inc/vl53l0x_platform_log.h \
- ../e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/../../platform/inc/vl53l0x_i2c_platform.h
+ ../e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/../../platform/inc/vl53l0x_i2c_platform.h \
+ ../e-puck2_main-processor/src/sensors/proximity.h
 
 /home/uos/Documents/eytan-epuck-lab/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/stdio.h:
 
@@ -466,3 +467,5 @@ main.h:
 ../e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/../../platform/inc/vl53l0x_platform_log.h:
 
 ../e-puck2_main-processor/src/sensors/VL53L0X/Api/core/inc/../../platform/inc/vl53l0x_i2c_platform.h:
+
+../e-puck2_main-processor/src/sensors/proximity.h:
