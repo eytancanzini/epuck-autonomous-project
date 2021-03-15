@@ -15,6 +15,7 @@
 #include "serial_comm.h"
 #include "chprintf.h"
 #include "usbcfg.h"
+#include "sensors/VL53L0X/VL53L0X.h"
 
 
 int main(void)
@@ -30,14 +31,18 @@ int main(void)
     left_motor_set_speed(0);
     right_motor_set_speed(0);
     usb_start();
+    VL53L0X_start();
 
+
+    uint16_t val;
 
     /* Infinite loop. */
     while (1) {
     	set_led(LED1, 1);
     	//waits 1 second
+    	val = VL53L0X_get_dist_mm();
     	if (SDU1.config->usbp->state == USB_ACTIVE) {
-    		chprintf((BaseSequentialStream*)&SDU1, "%4d,\n", 5);
+    		chprintf((BaseSequentialStream*)&SDU1, "%4d,\n", val);
     	}
         chThdSleepMilliseconds(1000);
         set_led(LED1, 0);
