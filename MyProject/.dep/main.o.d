@@ -141,7 +141,9 @@ build/obj/main.o: main.c \
  ../e-puck2_main-processor/src/spi_comm.h \
  ../e-puck2_main-processor/src/motors.h \
  ../e-puck2_main-processor/src/epuck1x/uart/e_uart_char.h \
- ../e-puck2_main-processor/src/serial_comm.h
+ ../e-puck2_main-processor/src/serial_comm.h \
+ ../e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h \
+ ../e-puck2_main-processor/src/usbcfg.h
 
 /home/uos/Documents/eytan-epuck-lab/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017-q4-major/arm-none-eabi/include/stdio.h:
 
@@ -430,3 +432,7 @@ main.h:
 ../e-puck2_main-processor/src/epuck1x/uart/e_uart_char.h:
 
 ../e-puck2_main-processor/src/serial_comm.h:
+
+../e-puck2_main-processor/ChibiOS//os/hal/lib/streams/chprintf.h:
+
+../e-puck2_main-processor/src/usbcfg.h:

@@ -13,17 +13,8 @@
 #include "epuck1x/uart/e_uart_char.h"
 #include "stdio.h"
 #include "serial_comm.h"
-
-
-void clear_leds(void);
-void spi_comm_start(void);
-void set_led(led_name_t led_number, unsigned int value);
-void motors_init(void);
-void left_motor_set_speed(int motor_speed);
-void right_motor_set_speed(int motor_speed);
-void serial_start(void);
-void e_send_uart1_char(const char * buff, int buff_len);
-
+#include "chprintf.h"
+#include "usbcfg.h"
 
 
 int main(void)
@@ -38,17 +29,16 @@ int main(void)
 
     left_motor_set_speed(0);
     right_motor_set_speed(0);
-    serial_start();
+    usb_start();
 
-    char str[100];
-    int str_length;
-    str_length = sprintf(str, "Hello World!\n");
 
     /* Infinite loop. */
     while (1) {
     	set_led(LED1, 1);
     	//waits 1 second
-    	e_send_uart1_char(str, str_length);
+    	if (SDU1.config->usbp->state == USB_ACTIVE) {
+    		chprintf((BaseSequentialStream*)&SDU1, "%4d,\n", 5);
+    	}
         chThdSleepMilliseconds(1000);
         set_led(LED1, 0);
         chThdSleepMilliseconds(1000);
