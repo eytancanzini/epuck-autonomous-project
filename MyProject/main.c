@@ -42,27 +42,77 @@ int main(void)
     calibrate_ir();
 
 
+    uint16_t TOF;
     uint16_t val;
+    uint16_t LHS;
+    uint16_t RHS;
+    uint16_t L_side;
+    uint16_t r_side;
 
     /* Infinite loop. */
     while (1) {
-    	set_led(LED1, 1);
-    	//waits 1 second
-    	val = VL53L0X_get_dist_mm();
+    	chThdSleepMilliseconds(250);
+    	// Obstacle Avoidance Implementation
+    	TOF = VL53L0X_get_dist_mm();
+    	LHS = get_prox(6);
+    	RHS = get_prox(1);
+    	L_side = get_prox(2);
+    	r_side = get_prox(5);
     	if (SDU1.config->usbp->state == USB_ACTIVE) {
-    		chprintf((BaseSequentialStream*)&SDU1, "%4d,\n", val);
-    	}
-        chThdSleepMilliseconds(1000);
-    	if (SDU1.config->usbp->state == USB_ACTIVE) {
+    		set_led(LED2, 1);
+    		chprintf((BaseSequentialStream*)&SDU1, "%4d,\n", TOF);
     		chprintf((BaseSequentialStream*)&SDU1, "-----------\n");
-    		chprintf((BaseSequentialStream*)&SDU1, "%4d\n", get_prox(0));
-    		chprintf((BaseSequentialStream*)&SDU1, "%4d\n", get_prox(1));
-    		chprintf((BaseSequentialStream*)&SDU1, "%4d\n", get_prox(2));
-    		chprintf((BaseSequentialStream*)&SDU1, "%4d\n", get_prox(3));
-    		chprintf((BaseSequentialStream*)&SDU1, "-----------\n");
+    		chprintf((BaseSequentialStream*)&SDU1, "%4d\n", LHS);
+			chprintf((BaseSequentialStream*)&SDU1, "%4d\n", RHS);
+			chprintf((BaseSequentialStream*)&SDU1, "-----------\n");
     	}
-        set_led(LED1, 0);
-        chThdSleepMilliseconds(1000);
+    	if (TOF < 45) {
+    		LHS = get_prox(6) + get_prox(7);
+    		RHS = get_prox(0) + get_prox(1);
+    		if (LHS > RHS) {
+    			val = TOF;
+    			while (val < (1.4*TOF)) {
+    				val = VL53L0X_get_dist_mm();
+    				left_motor_set_speed(250);
+    				right_motor_set_speed(-250);
+    			}
+    		}
+    		else {
+    			val = TOF;
+    			while (val < (1.4*TOF)) {
+    				val = VL53L0X_get_dist_mm();
+					left_motor_set_speed(-250);
+					right_motor_set_speed(250);
+				}
+    		}
+    	}
+    	// VFF - Virtual Force Field Implementation
+    	else if (LHS > 600 || RHS > 600) {
+    		if (LHS > RHS) {
+				left_motor_set_speed(250);
+				right_motor_set_speed(-250);
+			}
+			else {
+				left_motor_set_speed(-250);
+				right_motor_set_speed(250);
+			}
+			chThdSleepMilliseconds(750);
+    	}
+    	else if (L_side > 500 || r_side > 500) {
+    		if ((L_side - r_side) > 0) {
+    			left_motor_set_speed(-200);
+				right_motor_set_speed(350);
+    		}
+    		else if ((L_side - r_side) < 0) {
+    			left_motor_set_speed(350);
+				right_motor_set_speed(-200);
+    		}
+    		chThdSleepMilliseconds(750);
+    	}
+    	else {
+    		left_motor_set_speed(450);
+    		right_motor_set_speed(450);
+    	}
     }
 }
 

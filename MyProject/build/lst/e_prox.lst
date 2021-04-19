@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccDyzcCT.s 			page 1
+ARM GAS  /tmp/cc7X097G.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccDyzcCT.s 			page 1
   55              		.loc 1 6 0
   56 0018 FFF7FEBF 		b	calibrate_ir
   57              	.LVL0:
-ARM GAS  /tmp/ccDyzcCT.s 			page 2
+ARM GAS  /tmp/cc7X097G.s 			page 2
 
 
   58              	.L6:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccDyzcCT.s 			page 1
  112              	.L15:
  113              		.cfi_restore_state
  114              		.loc 1 14 0
-ARM GAS  /tmp/ccDyzcCT.s 			page 3
+ARM GAS  /tmp/cc7X097G.s 			page 3
 
 
  115 0020 9A42     		cmp	r2, r3
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccDyzcCT.s 			page 1
  169 000e 1B68     		ldr	r3, [r3]
  170              		.loc 1 20 0
  171 0010 06D9     		bls	.L24
-ARM GAS  /tmp/ccDyzcCT.s 			page 4
+ARM GAS  /tmp/cc7X097G.s 			page 4
 
 
  172              		.loc 1 25 0
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccDyzcCT.s 			page 1
  226              	.LVL12:
  227 0000 00B5     		push	{lr}
  228              		.cfi_def_cfa_offset 4
-ARM GAS  /tmp/ccDyzcCT.s 			page 5
+ARM GAS  /tmp/cc7X097G.s 			page 5
 
 
  229              		.cfi_offset 14, -4
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccDyzcCT.s 			page 1
  283              	.Letext0:
  284              		.file 2 "../e-puck2_main-processor/src/epuck1x/../sensors/proximity.h"
  285              		.section	.debug_info,"",%progbits
-ARM GAS  /tmp/ccDyzcCT.s 			page 6
+ARM GAS  /tmp/cc7X097G.s 			page 6
 
 
  286              	.Ldebug_info0:
@@ -309,15 +309,15 @@ ARM GAS  /tmp/ccDyzcCT.s 			page 1
  291 000b 01       		.uleb128 0x1
  292 000c AE000000 		.4byte	.LASF17
  293 0010 0C       		.byte	0xc
- 294 0011 89020000 		.4byte	.LASF18
- 295 0015 5A020000 		.4byte	.LASF19
+ 294 0011 92020000 		.4byte	.LASF18
+ 295 0015 45020000 		.4byte	.LASF19
  296 0019 00000000 		.4byte	.Ldebug_ranges0+0
  297 001d 00000000 		.4byte	0
  298 0021 00000000 		.4byte	.Ldebug_line0
  299 0025 02       		.uleb128 0x2
  300 0026 01       		.byte	0x1
  301 0027 06       		.byte	0x6
- 302 0028 4E020000 		.4byte	.LASF0
+ 302 0028 86020000 		.4byte	.LASF0
  303 002c 02       		.uleb128 0x2
  304 002d 01       		.byte	0x1
  305 002e 08       		.byte	0x8
@@ -333,7 +333,7 @@ ARM GAS  /tmp/ccDyzcCT.s 			page 1
  315 0041 02       		.uleb128 0x2
  316 0042 04       		.byte	0x4
  317 0043 05       		.byte	0x5
- 318 0044 45020000 		.4byte	.LASF4
+ 318 0044 7D020000 		.4byte	.LASF4
  319 0048 02       		.uleb128 0x2
  320 0049 04       		.byte	0x4
  321 004a 07       		.byte	0x7
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccDyzcCT.s 			page 1
  340 006c 00000000 		.4byte	.LASF9
  341 0070 01       		.byte	0x1
  342 0071 1B       		.byte	0x1b
-ARM GAS  /tmp/ccDyzcCT.s 			page 7
+ARM GAS  /tmp/cc7X097G.s 			page 7
 
 
  343 0072 5D000000 		.4byte	0x5d
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccDyzcCT.s 			page 1
  397 00ff 01       		.byte	0x1
  398 0100 09       		.byte	0x9
  399 0101 64000000 		.4byte	0x64
-ARM GAS  /tmp/ccDyzcCT.s 			page 8
+ARM GAS  /tmp/cc7X097G.s 			page 8
 
 
  400 0105 74000000 		.4byte	.LLST0
@@ -464,8 +464,8 @@ ARM GAS  /tmp/ccDyzcCT.s 			page 1
  440 016c 02       		.byte	0x2
  441 016d 33       		.byte	0x33
  442 016e 09       		.uleb128 0x9
- 443 016f CC020000 		.4byte	.LASF16
- 444 0173 CC020000 		.4byte	.LASF16
+ 443 016f D5020000 		.4byte	.LASF16
+ 444 0173 D5020000 		.4byte	.LASF16
  445 0177 02       		.byte	0x2
  446 0178 2A       		.byte	0x2a
  447 0179 00       		.byte	0
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccDyzcCT.s 			page 1
  454 0004 0E       		.uleb128 0xe
  455 0005 13       		.uleb128 0x13
  456 0006 0B       		.uleb128 0xb
-ARM GAS  /tmp/ccDyzcCT.s 			page 9
+ARM GAS  /tmp/cc7X097G.s 			page 9
 
 
  457 0007 03       		.uleb128 0x3
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccDyzcCT.s 			page 1
  511 003d 18       		.uleb128 0x18
  512 003e 9742     		.uleb128 0x2117
  513 0040 19       		.uleb128 0x19
-ARM GAS  /tmp/ccDyzcCT.s 			page 10
+ARM GAS  /tmp/cc7X097G.s 			page 10
 
 
  514 0041 01       		.uleb128 0x1
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccDyzcCT.s 			page 1
  568 007c 12       		.uleb128 0x12
  569 007d 06       		.uleb128 0x6
  570 007e 40       		.uleb128 0x40
-ARM GAS  /tmp/ccDyzcCT.s 			page 11
+ARM GAS  /tmp/cc7X097G.s 			page 11
 
 
  571 007f 18       		.uleb128 0x18
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccDyzcCT.s 			page 1
  625 0021 0100     		.2byte	0x1
  626 0023 50       		.byte	0x50
  627 0024 2D000000 		.4byte	.LVL15-1
-ARM GAS  /tmp/ccDyzcCT.s 			page 12
+ARM GAS  /tmp/cc7X097G.s 			page 12
 
 
  628 0028 38000000 		.4byte	.LFE3
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccDyzcCT.s 			page 1
  682 00a4 50       		.byte	0x50
  683 00a5 9F       		.byte	0x9f
  684 00a6 00000000 		.4byte	0
-ARM GAS  /tmp/ccDyzcCT.s 			page 13
+ARM GAS  /tmp/cc7X097G.s 			page 13
 
 
  685 00aa 00000000 		.4byte	0
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccDyzcCT.s 			page 1
  725              	.LASF5:
  726 0031 6C6F6E67 		.ascii	"long unsigned int\000"
  726      20756E73 
-ARM GAS  /tmp/ccDyzcCT.s 			page 14
+ARM GAS  /tmp/cc7X097G.s 			page 14
 
 
  726      69676E65 
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccDyzcCT.s 			page 1
  743      62202D4F 
  743      32202D66 
  743      6F6D6974 
-ARM GAS  /tmp/ccDyzcCT.s 			page 15
+ARM GAS  /tmp/cc7X097G.s 			page 15
 
 
  743      2D667261 
@@ -886,56 +886,58 @@ ARM GAS  /tmp/ccDyzcCT.s 			page 1
  758      6F725F6E 
  758      756D6265 
  758      7200
- 759              	.LASF4:
- 760 0245 6C6F6E67 		.ascii	"long int\000"
- 760      20696E74 
- 760      00
- 761              	.LASF0:
- 762 024e 7369676E 		.ascii	"signed char\000"
- 762      65642063 
- 762      68617200 
- 763              	.LASF19:
- 764 025a 2F686F6D 		.ascii	"/home/uos/Documents/eytan-epuck-lab/MyProject/\000"
- 764      652F756F 
- 764      732F446F 
-ARM GAS  /tmp/ccDyzcCT.s 			page 16
+ 759              	.LASF19:
+ 760 0245 2F686F6D 		.ascii	"/home/uos/Documents/epuck-autonomous-project/MyProj"
+ 760      652F756F 
+ 760      732F446F 
+ 760      63756D65 
+ 760      6E74732F 
+ 761 0278 6563742F 		.ascii	"ect/\000"
+ 761      00
+ 762              	.LASF4:
+ 763 027d 6C6F6E67 		.ascii	"long int\000"
+ 763      20696E74 
+ 763      00
+ARM GAS  /tmp/cc7X097G.s 			page 16
 
 
- 764      63756D65 
- 764      6E74732F 
- 765              	.LASF18:
- 766 0289 2E2E2F65 		.ascii	"../e-puck2_main-processor/src/epuck1x/a_d/advance_a"
- 766      2D707563 
- 766      6B325F6D 
- 766      61696E2D 
- 766      70726F63 
- 767 02bc 645F7363 		.ascii	"d_scan/e_prox.c\000"
- 767      616E2F65 
- 767      5F70726F 
- 767      782E6300 
- 768              	.LASF16:
- 769 02cc 63616C69 		.ascii	"calibrate_ir\000"
- 769      62726174 
- 769      655F6972 
- 769      00
- 770              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
-ARM GAS  /tmp/ccDyzcCT.s 			page 17
+ 764              	.LASF0:
+ 765 0286 7369676E 		.ascii	"signed char\000"
+ 765      65642063 
+ 765      68617200 
+ 766              	.LASF18:
+ 767 0292 2E2E2F65 		.ascii	"../e-puck2_main-processor/src/epuck1x/a_d/advance_a"
+ 767      2D707563 
+ 767      6B325F6D 
+ 767      61696E2D 
+ 767      70726F63 
+ 768 02c5 645F7363 		.ascii	"d_scan/e_prox.c\000"
+ 768      616E2F65 
+ 768      5F70726F 
+ 768      782E6300 
+ 769              	.LASF16:
+ 770 02d5 63616C69 		.ascii	"calibrate_ir\000"
+ 770      62726174 
+ 770      655F6972 
+ 770      00
+ 771              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  /tmp/cc7X097G.s 			page 17
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 e_prox.c
-     /tmp/ccDyzcCT.s:18     .text.e_calibrate_ir:0000000000000000 $t
-     /tmp/ccDyzcCT.s:26     .text.e_calibrate_ir:0000000000000000 e_calibrate_ir
-     /tmp/ccDyzcCT.s:65     .text.e_calibrate_ir:0000000000000020 $d
-     /tmp/ccDyzcCT.s:70     .text.e_get_prox:0000000000000000 $t
-     /tmp/ccDyzcCT.s:78     .text.e_get_prox:0000000000000000 e_get_prox
-     /tmp/ccDyzcCT.s:136    .text.e_get_prox:0000000000000034 $d
-     /tmp/ccDyzcCT.s:141    .text.e_get_calibrated_prox:0000000000000000 $t
-     /tmp/ccDyzcCT.s:149    .text.e_get_calibrated_prox:0000000000000000 e_get_calibrated_prox
-     /tmp/ccDyzcCT.s:207    .text.e_get_calibrated_prox:0000000000000034 $d
-     /tmp/ccDyzcCT.s:212    .text.e_get_ambient_light:0000000000000000 $t
-     /tmp/ccDyzcCT.s:220    .text.e_get_ambient_light:0000000000000000 e_get_ambient_light
-     /tmp/ccDyzcCT.s:278    .text.e_get_ambient_light:0000000000000034 $d
+     /tmp/cc7X097G.s:18     .text.e_calibrate_ir:0000000000000000 $t
+     /tmp/cc7X097G.s:26     .text.e_calibrate_ir:0000000000000000 e_calibrate_ir
+     /tmp/cc7X097G.s:65     .text.e_calibrate_ir:0000000000000020 $d
+     /tmp/cc7X097G.s:70     .text.e_get_prox:0000000000000000 $t
+     /tmp/cc7X097G.s:78     .text.e_get_prox:0000000000000000 e_get_prox
+     /tmp/cc7X097G.s:136    .text.e_get_prox:0000000000000034 $d
+     /tmp/cc7X097G.s:141    .text.e_get_calibrated_prox:0000000000000000 $t
+     /tmp/cc7X097G.s:149    .text.e_get_calibrated_prox:0000000000000000 e_get_calibrated_prox
+     /tmp/cc7X097G.s:207    .text.e_get_calibrated_prox:0000000000000034 $d
+     /tmp/cc7X097G.s:212    .text.e_get_ambient_light:0000000000000000 $t
+     /tmp/cc7X097G.s:220    .text.e_get_ambient_light:0000000000000000 e_get_ambient_light
+     /tmp/cc7X097G.s:278    .text.e_get_ambient_light:0000000000000034 $d
 
 UNDEFINED SYMBOLS
 calibrate_ir
