@@ -49,6 +49,25 @@ int main(void)
     uint16_t L_side;
     uint16_t r_side;
 
+    set_led(LED1, 1);
+    chThdSleepMilliseconds(750);
+    set_led(LED2, 1);
+    chThdSleepMilliseconds(750);
+    set_led(LED3, 1);
+    chThdSleepMilliseconds(750);
+    set_led(LED4, 1);
+    chThdSleepMilliseconds(750);
+    set_led(LED5, 1);
+    chThdSleepMilliseconds(750);
+    set_led(LED6, 1);
+    chThdSleepMilliseconds(750);
+    set_led(LED7, 1);
+    chThdSleepMilliseconds(750);
+    set_led(LED8, 1);
+    chThdSleepMilliseconds(1250);
+    clear_leds();
+
+
     /* Infinite loop. */
     while (1) {
     	chThdSleepMilliseconds(250);
@@ -96,7 +115,7 @@ int main(void)
 				left_motor_set_speed(-250);
 				right_motor_set_speed(250);
 			}
-			chThdSleepMilliseconds(750);
+			chThdSleepMilliseconds(500);
     	}
     	else if (L_side > 500 || r_side > 500) {
     		if ((L_side - r_side) > 0) {
@@ -107,11 +126,11 @@ int main(void)
     			left_motor_set_speed(350);
 				right_motor_set_speed(-200);
     		}
-    		chThdSleepMilliseconds(750);
+    		chThdSleepMilliseconds(500);
     	}
     	else {
-    		left_motor_set_speed(450);
-    		right_motor_set_speed(450);
+    		left_motor_set_speed(400);
+    		right_motor_set_speed(400);
     	}
     }
 }
