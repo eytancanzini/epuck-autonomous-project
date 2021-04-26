@@ -56,21 +56,21 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  17 .comment      0000007e  00000000  00000000  00031501  2**0
                   CONTENTS, READONLY
- 18 .debug_info   001125ea  00000000  00000000  0003157f  2**0
+ 18 .debug_info   001125f3  00000000  00000000  0003157f  2**0
                   CONTENTS, READONLY, DEBUGGING
- 19 .debug_abbrev 00012a41  00000000  00000000  00143b69  2**0
+ 19 .debug_abbrev 00012a41  00000000  00000000  00143b72  2**0
                   CONTENTS, READONLY, DEBUGGING
- 20 .debug_loc    00023f84  00000000  00000000  001565aa  2**0
+ 20 .debug_loc    00023f84  00000000  00000000  001565b3  2**0
                   CONTENTS, READONLY, DEBUGGING
- 21 .debug_aranges 000023b8  00000000  00000000  0017a52e  2**0
+ 21 .debug_aranges 000023b8  00000000  00000000  0017a537  2**0
                   CONTENTS, READONLY, DEBUGGING
- 22 .debug_ranges 00004990  00000000  00000000  0017c8e6  2**0
+ 22 .debug_ranges 00004990  00000000  00000000  0017c8ef  2**0
                   CONTENTS, READONLY, DEBUGGING
- 23 .debug_line   0002f514  00000000  00000000  00181276  2**0
+ 23 .debug_line   0002f515  00000000  00000000  0018127f  2**0
                   CONTENTS, READONLY, DEBUGGING
- 24 .debug_str    0000bcd0  00000000  00000000  001b078a  2**0
+ 24 .debug_str    0000bcd0  00000000  00000000  001b0794  2**0
                   CONTENTS, READONLY, DEBUGGING
- 25 .debug_frame  0000ac40  00000000  00000000  001bc45c  2**2
+ 25 .debug_frame  0000ac40  00000000  00000000  001bc464  2**2
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 08000000 l    d  startup	00000000 startup
@@ -904,7 +904,7 @@ e000ed04 l       *ABS*	00000000 SCB_ICSR
 0800d570 g     F .text	00000050 sdc_lld_send_cmd_short
 08010eb0 g     F .text	00000094 memset
 08002580 g     F .text	00000084 MemManage_Handler
-080012f0 g     F .text	00000238 main
+080012f0 g     F .text	0000023c main
 0800bc50 g     F .text	0000004c Vector6C
 00000000 g       *ABS*	00000000 __ram6_size__
 20005688 g     O .bss	00000004 __malloc_max_total_mem

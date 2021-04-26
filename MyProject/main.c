@@ -160,6 +160,7 @@ int main(void)
 	uint16_t LHS;
 	uint16_t RHS;
 
+
 	if (SDU1.config->usbp->state == USB_ACTIVE) {
 		set_led(LED2, 1);
 		chprintf((BaseSequentialStream*)&SDU1, "%4d,\n", VL53L0X_get_dist_mm());
@@ -185,7 +186,8 @@ int main(void)
 	clear_leds();
 
 	while(1) {
-		chThdSleepMilliseconds(250);
+		chThdSleepMilliseconds(100);
+		clear_leds();
 		TOF = VL53L0X_get_dist_mm();
 		if (SDU1.config->usbp->state == USB_ACTIVE) {
 			set_led(LED2, 1);
@@ -193,8 +195,8 @@ int main(void)
 			chprintf((BaseSequentialStream*)&SDU1, "-----------\n");
 		}
 		if (TOF > 50 && TOF < 300) {
-			left_motor_set_speed(TOF*0.1*150);
-			right_motor_set_speed(TOF*0.1*150);
+			left_motor_set_speed(TOF*0.1*100);
+			right_motor_set_speed(TOF*0.1*100);
 		}
 		else if (TOF >=300) {
 			prox_0 = get_prox(0);
