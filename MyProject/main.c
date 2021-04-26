@@ -70,7 +70,7 @@ int main(void)
 //
 //	/* Infinite loop. */
 //	while (1) {
-//		chThdSleepMilliseconds(250);
+//		chThdSleepMilliseconds(100);
 //		// Obstacle Avoidance Implementation
 //		TOF = VL53L0X_get_dist_mm();
 //		LHS = get_prox(6);
